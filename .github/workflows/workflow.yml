@@ -1,0 +1,12 @@
+on: [push]
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Azure SQL Deploy
+        uses: Azure/sql-action@v1
+        with:
+          server-name: sqldiary
+          connection-string: Server=tcp:sqldiary.database.windows.net,1433;Initial Catalog=dziennik;Persist Security Info=False;User ID=Pau057178;Password=G00dD@y13;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
+          dacpac-package: './Database.dacpac'
