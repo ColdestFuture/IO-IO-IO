@@ -1,7 +1,4 @@
-version: "3.9"
-
 services:
-
   phpmyadmin:
     container_name: phpmyadmin
     image: phpmyadmin/phpmyadmin:latest
@@ -19,3 +16,11 @@ services:
       - MYSQL_PASSWORD=haslo2
     ports:
       - "3307:3306"
+  # sql:
+  #   image: "mcr.microsoft.com/mssql/server:latest"
+  #   ports:
+  #     - "1433:1433"
+  #   environment:
+  #     SA_PASSWORD: "SecurePassword123"
+  #     ACCEPT_EULA: "Y"
+      
