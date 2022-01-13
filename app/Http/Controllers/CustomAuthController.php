@@ -7,6 +7,7 @@ use Hash;
 use Session;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class CustomAuthController extends Controller
 {
@@ -69,7 +70,9 @@ class CustomAuthController extends Controller
     public function dashboard()
     {
         if(Auth::check()){
-            return view('dashboard');
+            $user = Auth::user();         
+
+            return view('dashboard',['user' => $user]);
         }
   
         return redirect("login")->withSuccess('You are not allowed to access');

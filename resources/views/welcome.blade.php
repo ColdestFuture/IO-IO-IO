@@ -25,7 +25,28 @@
                     </li>
                     @else
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('signout') }}">Logout</a>
+                        <a class="nav-link" href="">Wiadomości</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Plan zajęć</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Oceny</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Uwagi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Oceny</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Kalendarz</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Ustawienia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('signout') }}">Wyloguj</a>
                     </li>
                     @endguest
                 </ul>
@@ -33,7 +54,6 @@
         </div>
     </nav>
     @yield('content')
-
 </body>
 
 </html>
