@@ -10,7 +10,7 @@ use App\Http\Controllers\CustomAuthController;
 |--------------------------------------------------------------------------
 */
 
-Route::get('dashboard', [CustomAuthController::class, 'dashboard']); 
+Route::get('dashboard', [CustomAuthController::class, 'dashboard'])->name('dashboard'); 
 Route::get('login', [CustomAuthController::class, 'index'])->name('login');
 Route::post('custom-login', [CustomAuthController::class, 'customLogin'])->name('login.custom'); 
 Route::get('registration', [CustomAuthController::class, 'registration'])->name('register-user');
@@ -21,3 +21,8 @@ Route::get('/', function () {
     
     return view('welcome');
 });
+
+Route::get('kalendarz', function () {
+    
+    return view('calendar');
+})->name('kalendarz');
