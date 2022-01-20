@@ -24,7 +24,7 @@ class CreateUzytkownicyTable extends Migration
             $table->string('Email',320);
             $table->char('Telefon',9);
             $table->enum('Rola',['N','W','U','O']);
-	    $table->char('Haslo',320);
+	        $table->char('Haslo',255);
             $table->primary('Id_uzytkownika');
         });
     }
