@@ -31,3 +31,8 @@ Route::get('plan', function () {
     
     return view('plan_lekcji');
 })->name('plan');
+
+Route::get('test', function () {
+    
+    return view('test');
+})->name('test');
