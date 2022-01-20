@@ -36,7 +36,7 @@
                         <a class="nav-link" href="">Wiadomości</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">Plan zajęć</a>
+                        <a class="nav-link" href="{{ route('plan') }}">Plan zajęć</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="">Oceny</a>

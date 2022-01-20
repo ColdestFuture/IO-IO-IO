@@ -1774,10 +1774,10 @@ var FullCalendar = (function (exports) {
         weekNumberCalculation: 'local',
         editable: false,
         nowIndicator: false,
-        scrollTime: '06:00:00',
+        scrollTime: '07:00:00',
         scrollTimeReset: true,
-        slotMinTime: '00:00:00',
-        slotMaxTime: '24:00:00',
+        slotMinTime: '07:00:00',
+        slotMaxTime: '16:00:00',
         showNonCurrentDates: true,
         lazyFetching: true,
         startParam: 'start',
@@ -14201,8 +14201,8 @@ var FullCalendar = (function (exports) {
             timeGrid: {
                 component: DayTimeColsView,
                 usesMinMaxTime: true,
-                allDaySlot: true,
-                slotDuration: '00:30:00',
+                allDaySlot: false,
+                slotDuration: '00:15:00',
                 slotEventOverlap: true, // a bad name. confused with overlap/constraint system
             },
             timeGridDay: {

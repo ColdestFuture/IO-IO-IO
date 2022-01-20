@@ -26,3 +26,8 @@ Route::get('kalendarz', function () {
     
     return view('calendar');
 })->name('kalendarz');
+
+Route::get('plan', function () {
+    
+    return view('plan_lekcji');
+})->name('plan');
