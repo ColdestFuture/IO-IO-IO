@@ -36,7 +36,7 @@
 
                             <!-- Submit Form Input -->
                             <div class="mt-4">
-                                <x-button>Submit</x-button>
+                                <x-button>Wyślij</x-button>
                             </div>
                         </form>
 
