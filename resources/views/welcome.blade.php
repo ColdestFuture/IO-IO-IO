@@ -55,7 +55,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('signout') }}">Wyloguj się</a>
-                    </li>                    
+                    </li>   
                     @else
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('messages') }}">Wiadomości</a>

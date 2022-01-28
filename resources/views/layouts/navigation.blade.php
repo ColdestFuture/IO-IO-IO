@@ -31,6 +31,31 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('register-user') }}">Rejestracja</a>
                     </li>
+                    @dyrektor
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('messages') }}">Wiadomości</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Oceny</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Uwagi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Nauczyciele</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Uczniowie</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('kalendarz') }}">Kalendarz</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('dashboard') }}">Ustawienia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('signout') }}">Wyloguj się</a>
+                    </li>   
                     @else
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('messages') }}">Wiadomości</a>
