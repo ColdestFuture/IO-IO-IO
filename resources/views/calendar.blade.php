@@ -20,13 +20,15 @@
     var calendarEl = document.getElementById('calendar');
     var aktualna_data = new Date();
     var mies=(aktualna_data.getMonth()+1<10) ? ('0'+(aktualna_data.getMonth()+1)) : (aktualna_data.getMonth()+1);
+    var dzien=(aktualna_data.getDay()<10) ? ('0'+(aktualna_data.getDay())) : (aktualna_data.getDay());
+    var data_ini = aktualna_data.getFullYear()+'-'+mies+'-'+dzien;  
     var calendar = new FullCalendar.Calendar(calendarEl, {
       headerToolbar: {
         left: 'prevYear,prev,next,nextYear today',
         center: 'title',
         right: 'dayGridMonth,dayGridWeek,dayGridDay'
       },
-      initialDate: aktualna_data.getFullYear()+'-'+mies+'-'+aktualna_data.getDate(),
+      initialDate: data_ini,
       navLinks: true, // can click day/week names to navigate views
       editable: true,
       dayMaxEvents: true, // allow "more" link when too many events
