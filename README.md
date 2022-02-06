@@ -73,3 +73,12 @@ php artisan serve
 
 Komenda do odpalenia migracji:
 php artisan migrate
+
+Komenda do wrzucenia testowego użytkownika:
+php artisan db:seed
+
+Komenda do odpalenia testów:
+vendor/bin/phpunit
+
+przykład dla jednego testu:
+vendor/bin/phpunit tests/Feature/LoginTest.php

@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CustomAuthController;
 use App\Http\Controllers\MessagesController;
+use App\Http\Controllers\EventController;
 
 
 /*
@@ -23,10 +24,19 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('kalendarz', function () {
+Route::get('kalendarz', [EventController::class, 'index'])->name('kalendarz');
+Route::get('addEvent', [EventController::class, 'addEvent'])->name('addEvent');
+Route::post('custom-add', [EventController::class, 'customAddEvent'])->name('event.add.custom'); 
+Route::post('editEvent', [EventController::class, 'editEvent'])->name('editEvent');
+Route::post('custom-edit', [EventController::class, 'customEditEvent'])->name('event.edit.custom');
+Route::post('custom-delete', [EventController::class, 'customDeleteEvent'])->name('event.delete.custom');  
+
+
+Route::get('plan', function () {
     
-    return view('calendar');
-})->name('kalendarz');
+    return view('plan_lekcji');
+})->name('plan');
+
 Route::group(['middleware' => 'auth', 'prefix' => 'messages', 'as' => 'messages'], function () {
     Route::get('/', [MessagesController::class, 'index']);
     Route::get('create', [MessagesController::class, 'create'])->name('.create');
@@ -37,4 +47,3 @@ Route::group(['middleware' => 'auth', 'prefix' => 'messages', 'as' => 'messages'
 });
 
 require __DIR__.'/auth.php';
-
