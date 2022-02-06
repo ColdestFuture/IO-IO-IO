@@ -26,6 +26,9 @@ Route::get('/', function () {
 Route::get('kalendarz', [EventController::class, 'index'])->name('kalendarz');
 Route::get('addEvent', [EventController::class, 'addEvent'])->name('addEvent');
 Route::post('custom-add', [EventController::class, 'customAddEvent'])->name('event.add.custom'); 
+Route::post('editEvent', [EventController::class, 'editEvent'])->name('editEvent');
+Route::post('custom-edit', [EventController::class, 'customEditEvent'])->name('event.edit.custom');
+Route::post('custom-delete', [EventController::class, 'customDeleteEvent'])->name('event.delete.custom');  
 
 
 Route::get('plan', function () {

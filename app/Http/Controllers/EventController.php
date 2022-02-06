@@ -42,5 +42,35 @@ class EventController extends Controller
         'Data' => $data['data'].' '.$data['time']
       ]);
     }
+    public function editEvent(Request $request)
+    {
+        $data = $request->all();
+        $query_edit = DB::table('events')->where('id', '=', $data['idEvent'])->get();
+        return view('event_edit',['event' => $query_edit[0]] );
+
+    }
+
+    public function customEditEvent(Request $request)
+    {
+        $data = $request->all();
+        DB::table('events')
+            ->where('id', $data['ID'])
+            ->update([
+                'title' => $data['title'],
+                'Data' => $data['data'].' '.$data['time']
+    ]);
+
+        return redirect('kalendarz');
+    }
+
+    public function customDeleteEvent(Request $request)
+    {
+        $data = $request->all();
+        DB::table('events')
+            ->where('id', $data['idEvent'])
+            ->delete();
+
+        return redirect('kalendarz');
+    }
     
 }
