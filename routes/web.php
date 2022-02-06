@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CustomAuthController;
+use App\Http\Controllers\EventController;
 
 
 /*
@@ -22,10 +23,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('kalendarz', function () {
-    
-    return view('calendar');
-})->name('kalendarz');
+Route::get('kalendarz', [EventController::class, 'index'])->name('kalendarz');
+Route::get('addEvent', [EventController::class, 'addEvent'])->name('addEvent');
+Route::post('custom-add', [EventController::class, 'customAddEvent'])->name('event.add.custom'); 
+
 
 Route::get('plan', function () {
     
