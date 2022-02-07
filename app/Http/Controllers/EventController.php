@@ -53,24 +53,34 @@ class EventController extends Controller
     public function customEditEvent(Request $request)
     {
         $data = $request->all();
-        DB::table('events')
-            ->where('id', $data['ID'])
-            ->update([
-                'title' => $data['title'],
-                'Data' => $data['data'].' '.$data['time']
-    ]);
+        $check = $this->update($data);
 
         return redirect('kalendarz');
+    }
+
+    public function update(array $data)
+    {
+      return DB::table('events')
+      ->where('id', $data['ID'])
+      ->update([
+          'title' => $data['title'],
+          'Data' => $data['data'].' '.$data['time']
+      ]);
     }
 
     public function customDeleteEvent(Request $request)
     {
         $data = $request->all();
-        DB::table('events')
-            ->where('id', $data['idEvent'])
-            ->delete();
+        $check = $this->update($data);
+
 
         return redirect('kalendarz');
     }
     
+    public function delete(array $data)
+    {
+      return DB::table('events')
+      ->where('id', $data['idEvent'])
+      ->delete();
+    }
 }

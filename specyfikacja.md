@@ -99,8 +99,37 @@
 ![alt text](https://i.ibb.co/dP9xpZD/szkic1-0602.png "Szkic interfejsu")
 
 ![alt text](https://i.ibb.co/B4McLQQ/szkic2-0602.png "Szkic interfejsu 2")
-  
 
-9. Projekt bazy danych;
+![alt text](https://i.ibb.co/t8VxgRh/szkic3-0602.png "Szkic interfejsu 3")
 
-![alt text](https://i.ibb.co/Dg6F4Jn/baza.png "Baza danych")
+
+10. Projekt bazy danych;
+
+![alt text](https://i.ibb.co/GVBmCS8/baza-v2.png "Baza danych")
+
+
+11. Wykonane funckjonalności;
+
+- Paulina Kożuch
+          	 - 
+         	 - 
+
+- Krzysztof Bajorski
+          	 - Użytkownik wysyła wiadomości 
+          	 - Użytkownik odbiera wiadomości 
+          	 - Użytkownik może wyświetlić swoje wiadomości 
+          	 - Użytkownik może odpisywać na wiadomości 
+          	 - Dyrektor po zalogowaniu będzie miał inaczej wyglądającą stronę
+
+- Dawid Beinka
+          	 - 
+         	 -  
+         
+- Michał Wielopolski
+          	 - Użytkownik zostaje zarejestrowany 
+         	 - Użytkownik loguje się do aplikacji 
+         	 - Użytkownik wyświetla ogłoszenia w kalendarzu 
+         	 - Użytkownik dodaje ogłoszenie 
+         	 - Użytkownik edytuje ogłoszenie 
+         	 - Użytkownik usuwa ogłoszenie
+

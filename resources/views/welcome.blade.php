@@ -75,9 +75,6 @@
                         <a class="nav-link" href="{{ route('dashboard') }}">Ustawienia</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('test') }}">Test</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="{{ route('signout') }}">Wyloguj się</a>
                     </li>
                     @endguest
