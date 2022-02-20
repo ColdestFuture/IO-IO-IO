@@ -14,13 +14,10 @@ class CreateOcenyTable extends Migration
     public function up()
     {
         Schema::create('Oceny', function (Blueprint $table) {
-           $table->bigIncrements('Id_oceny');
-	   $table->char('Id_ucznia',11);
-	   $table->char('Id_nauczyciela',11);
-	   $table->decimal('Ocena', $precision = 3, $scale = 2);
-	   $table->decimal('Waga', $precision = 1, $scale = 0);
-	   $table->dateTime('Data');
-	   $table->char('Id_przedmiotu', 2);
+           $table->id('Id_oceny')->from(1000);
+        $table->char('Id_uzytkownika', 11);
+        $table->char('Ocena', 1);
+        $table->enum('Przedmiot', ['Polski', 'Matematyka', 'Angielski']);
 
         });
     }
