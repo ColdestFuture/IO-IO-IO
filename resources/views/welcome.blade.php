@@ -38,7 +38,7 @@
                         <a class="nav-link" href="{{ route('messages') }}">Wiadomości</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">Oceny</a>
+                        <a class="nav-link" href="{{ route('grade_choose') }}">Oceny</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="">Uwagi</a>
@@ -57,7 +57,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('signout') }}">Wyloguj się</a>
-                    </li>   
+                    </li>
                     @else
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('messages') }}">Wiadomości</a>
