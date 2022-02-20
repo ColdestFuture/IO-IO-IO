@@ -24,6 +24,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('grade_choose', [GradeController::class, 'grade_choose'])->name('grade_choose');
+
 Route::get('kalendarz', [EventController::class, 'index'])->name('kalendarz');
 Route::get('addEvent', [EventController::class, 'addEvent'])->name('addEvent');
 Route::post('custom-add', [EventController::class, 'customAddEvent'])->name('event.add.custom'); 
